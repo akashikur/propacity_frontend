@@ -2,10 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../style/nav.css";
 // navBar for the pages
-const Nav = () => {
+const Nav = ({ setMenu }) => {
+  function handleMenu() {
+    if (setMenu) {
+      setMenu(false);
+    }
+  }
   return (
     <div className={`navbar`}>
-      <NavLink to="/films" className="nav-option">
+      <NavLink to="/films" className="nav-option" onClick={handleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -33,7 +38,7 @@ const Nav = () => {
         </svg>
       </NavLink>
 
-      <NavLink to="/people" className="nav-option">
+      <NavLink to="/people" className="nav-option" onClick={handleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -61,7 +66,7 @@ const Nav = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="/planets" className="nav-option">
+      <NavLink to="/planets" className="nav-option" onClick={handleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -89,7 +94,7 @@ const Nav = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="/species" className="nav-option">
+      <NavLink to="/species" className="nav-option" onClick={handleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -117,7 +122,7 @@ const Nav = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="/starships" className="nav-option">
+      <NavLink to="/starships" className="nav-option" onClick={handleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -145,7 +150,7 @@ const Nav = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="/vehicles" className="nav-option">
+      <NavLink to="/vehicles" className="nav-option" onClick={handleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"

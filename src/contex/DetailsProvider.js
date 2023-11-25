@@ -8,6 +8,7 @@ const DetailsProvider = ({ children }) => {
   const [details, setDetils] = useState();
   const [search, setSearch] = useState("");
   const [modal, setModal] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   return (
     <DetailsContex.Provider
@@ -20,6 +21,8 @@ const DetailsProvider = ({ children }) => {
         setSearch: setSearch,
         modal: modal,
         setModal: setModal,
+        menu: menu,
+        setMenu: setMenu,
       }}
     >
       {children}

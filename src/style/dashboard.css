@@ -35,3 +35,32 @@
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.14px;
 }
+@media only screen and (max-width: 850px) {
+  .dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dash {
+    display: flex;
+    margin-top: 50px;
+    width: 80%;
+    padding: 13px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .dash img {
+    width: 100%;
+  }
+  .dash h1 {
+    width: 100%;
+    color: #3b3f5c;
+    font-size: 18px;
+  }
+  .dash p {
+    width: 100%;
+    font-size: 10px;
+    line-height: 13px;
+  }
+}

@@ -42,11 +42,12 @@
     padding: 19px 6px 10px 6px;
   }
 }
-/* @media only screen and (max-width: 850px) {
+@media only screen and (max-width: 850px) {
   .navbar {
     position: absolute;
     width: 50%;
     height: 100%;
+    top: 66px;
     left: 0px;
     z-index: 10;
     background-color: rgba(3, 18, 59);
@@ -63,4 +64,4 @@
     width: 80%;
     height: 100%;
   }
-} */
+}

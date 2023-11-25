@@ -35,3 +35,7 @@
 li span {
   color: #f15454;
 }
+.dropdown-list li:hover {
+  border-radius: 4px;
+  background: var(--Grey-3, #f1f1f5);
+}
