@@ -16,7 +16,7 @@
 }
 .li-pos {
   top: 50px;
-  left: 86%;
+  left: 85%;
 }
 .dropdown-list li {
   display: flex;
@@ -38,4 +38,34 @@ li span {
 .dropdown-list li:hover {
   border-radius: 4px;
   background: var(--Grey-3, #f1f1f5);
+}
+@media only screen and (max-width: 1100px) {
+  .li-pos {
+    top: 50px;
+    left: 75%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .li-pos {
+    top: 50px;
+    left: 70%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .li-pos {
+    top: 50px;
+    left: 65%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .li-pos {
+    top: 50px;
+    left: 60%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .li-pos {
+    top: 50px;
+    left: 50%;
+  }
 }
