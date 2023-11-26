@@ -14,8 +14,7 @@ import DeleteModal from "./components/common/DeleteModal";
 import Nav from "./components/common/Nav";
 
 function App() {
-  const { asideDisplay, setAsideDisplay, modal, menu, setMenu } =
-    useContext(DetailsContex);
+  const { asideDisplay, setAsideDisplay, modal } = useContext(DetailsContex);
 
   return (
     <div className="app">
@@ -30,7 +29,7 @@ function App() {
       </Routes>
       {asideDisplay && <Details setAsideDisplay={setAsideDisplay} />}
       {modal && <DeleteModal />}
-      {menu && <Nav setMenu={setMenu} />}
+      {/* {menu && <Nav setMenu={setMenu} />} */}
     </div>
   );
 }

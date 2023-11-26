@@ -38,9 +38,6 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
   }, [asideDisplay]);
 
   function handleMenu() {
-    if (setMenu) {
-      setMenu(false);
-    }
     setAsideDisplay(false);
   }
   return (

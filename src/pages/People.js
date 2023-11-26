@@ -14,7 +14,7 @@ const People = () => {
   const [peoples, setPeoples] = useState([]);
   const [filter, setFilter] = useState([]);
   const [isLoader, setIsLoader] = useState(false);
-  const { search, setSearch } = useContext(DetailsContex);
+  const { search, setSearch, menu, setMenu } = useContext(DetailsContex);
   const list = ["Name", "Gender", "birth Date", ""];
   // fetching the people data
   useEffect(() => {
@@ -50,6 +50,7 @@ const People = () => {
           <div className="first">
             <Nav people={peoples} />
           </div>
+          {menu && <Nav setMenu={setMenu} people={peoples} />}
           {isLoader ? (
             <Loader />
           ) : (

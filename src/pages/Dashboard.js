@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../components/common/Header";
 import Nav from "../components/common/Nav";
 import prof from "../images/Rectangle 6.jpg";
 import "../style/dashboard.css";
+import DetailsContex from "../contex/DetailsContex";
 
 // Dashboard page
 const Dashboard = () => {
+  const { setMenu, menu } = useContext(DetailsContex);
+
   return (
     <div>
       <Header dash={true} />
@@ -13,6 +16,7 @@ const Dashboard = () => {
         <div className="first">
           <Nav />
         </div>
+        {menu && <Nav setMenu={setMenu} />}
         <div className="second">
           <div className="dashboard">
             <div className="dash">

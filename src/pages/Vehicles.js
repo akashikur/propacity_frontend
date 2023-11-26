@@ -14,7 +14,7 @@ const Vehicles = () => {
   const [filter, setFilter] = useState([]);
   const [isLoader, setIsLoader] = useState(false);
 
-  const { search, setSearch } = useContext(DetailsContex);
+  const { search, setSearch, menu, setMenu } = useContext(DetailsContex);
   const list = ["Name", "Model", "Price", ""];
   useEffect(() => {
     setIsLoader(true);
@@ -47,6 +47,7 @@ const Vehicles = () => {
           <div className="first">
             <Nav vehicle={vehicles} />
           </div>
+          {menu && <Nav setMenu={setMenu} vehicle={vehicles} />}
           {isLoader ? (
             <Loader />
           ) : (

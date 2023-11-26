@@ -14,7 +14,7 @@ const Films = () => {
   const [films, setFilms] = useState([]);
   const [filter, setFilter] = useState([]);
   const [isLoader, setIsLoader] = useState(false);
-  const { search, setSearch } = useContext(DetailsContex);
+  const { search, setSearch, menu, setMenu } = useContext(DetailsContex);
   const list = ["Name", "Director", "Release Date", ""];
 
   // fetching the film data
@@ -51,6 +51,7 @@ const Films = () => {
           <div className="first">
             <Nav film={films} />
           </div>
+          {menu && <Nav setMenu={setMenu} film={films} />}
           {/* the loader will active whenever there is some delay to fetch the data  */}
           {isLoader ? (
             <Loader />

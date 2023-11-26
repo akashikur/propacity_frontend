@@ -15,7 +15,7 @@ const Species = () => {
   const [filter, setFilter] = useState([]);
   const [isLoader, setIsLoader] = useState(false);
 
-  const { search, setSearch } = useContext(DetailsContex);
+  const { search, setSearch, menu, setMenu } = useContext(DetailsContex);
   const list = ["Name", "Designation", "Language", ""];
   // fetching the species data
   useEffect(() => {
@@ -50,6 +50,7 @@ const Species = () => {
           <div className="first">
             <Nav specie={species} />
           </div>
+          {menu && <Nav setMenu={setMenu} specie={species} />}
           {isLoader ? (
             <Loader />
           ) : (
