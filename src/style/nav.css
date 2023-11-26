@@ -16,6 +16,10 @@
   width: 100%;
   height: 36px;
 }
+.nav-option svg {
+  width: 18px;
+  height: 18px;
+}
 .nav-option div {
   display: flex;
   justify-content: space-between;
