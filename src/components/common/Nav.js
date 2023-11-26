@@ -30,18 +30,18 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
       setDetils(item);
     }
   }
+
   useEffect(() => {
     if (!asideDisplay) {
       setActiveIndex(null);
     }
   }, [asideDisplay]);
+
   function handleMenu() {
     if (setMenu) {
       setMenu(false);
     }
-    // if (film) {
-    //   setFilmDrop(true);
-    // }
+    setAsideDisplay(false);
   }
   return (
     <div className={`navbar`}>
@@ -87,6 +87,7 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
           </svg>
         )}
       </NavLink>
+      {/* film dropdown in title order  */}
       {film &&
         film.map((item, index) => (
           <div
@@ -120,6 +121,7 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
             </svg>
           </div>
         ))}
+
       <NavLink to="/people" className="nav-option" onClick={handleMenu}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -163,6 +165,7 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
           </svg>
         )}
       </NavLink>
+      {/* people dropdown in name order  */}
       {people &&
         people.map((item, index) => (
           <div
@@ -245,6 +248,7 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
           </svg>
         )}
       </NavLink>
+      {/* planet dropdown in name order  */}
       {planet &&
         planet.map((item, index) => (
           <div
@@ -321,6 +325,7 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
           </svg>
         )}
       </NavLink>
+      {/* specie dropdown in name order  */}
       {specie &&
         specie.map((item, index) => (
           <div
@@ -396,6 +401,8 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
           </svg>
         )}
       </NavLink>
+      {/* ship dropdown in name order  */}
+
       {ship &&
         ship.map((item, index) => (
           <div
@@ -471,6 +478,8 @@ const Nav = ({ setMenu, film, people, planet, specie, ship, vehicle }) => {
           </svg>
         )}
       </NavLink>
+      {/* vehicle dropdown in name order  */}
+
       {vehicle &&
         vehicle.map((item, index) => (
           <div

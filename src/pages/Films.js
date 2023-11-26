@@ -51,6 +51,7 @@ const Films = () => {
           <div className="first">
             <Nav film={films} />
           </div>
+          {/* the loader will active whenever there is some delay to fetch the data  */}
           {isLoader ? (
             <Loader />
           ) : (
