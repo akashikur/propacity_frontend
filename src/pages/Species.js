@@ -48,8 +48,8 @@ const Species = () => {
       <div>
         <div className="full-container">
           <div className="first">
-            <Nav />
-          </div>{" "}
+            <Nav specie={species} />
+          </div>
           {isLoader ? (
             <Loader />
           ) : (

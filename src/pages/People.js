@@ -48,7 +48,7 @@ const People = () => {
       <div>
         <div className="full-container">
           <div className="first">
-            <Nav />
+            <Nav people={peoples} />
           </div>
           {isLoader ? (
             <Loader />

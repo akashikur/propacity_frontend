@@ -45,7 +45,7 @@ const Vehicles = () => {
       <div>
         <div className="full-container">
           <div className="first">
-            <Nav />
+            <Nav vehicle={vehicles} />
           </div>
           {isLoader ? (
             <Loader />

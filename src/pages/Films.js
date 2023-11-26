@@ -49,7 +49,7 @@ const Films = () => {
       <div>
         <div className="full-container">
           <div className="first">
-            <Nav />
+            <Nav film={films} />
           </div>
           {isLoader ? (
             <Loader />

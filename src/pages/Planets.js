@@ -50,7 +50,7 @@ const Planets = () => {
       <div>
         <div className="full-container">
           <div className="first">
-            <Nav />
+            <Nav planet={planets} />
           </div>
           {isLoader ? (
             <Loader />
